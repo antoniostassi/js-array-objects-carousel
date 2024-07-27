@@ -60,6 +60,28 @@ buttonBack.addEventListener("click", function(event) {
         refIndex--; // Altrimenti diminuiscilo di 1 ( Dunque sarà necessariamente sempre maggiore di 0 )
     };
 
+    showImage();
+
+});
+
+buttonNext.addEventListener("click", function(event) {
+
+    event.preventDefault;
+
+    if(refIndex == carouselImages.length-1) { // Se l'indice di riferimento è uguale all'indice massimo dell'array delle immagini
+        refIndex = 0; // Allora al click, l'indice invece di diventare di un indice maggiore e dunque undefined, diventerà 0.
+    } else {
+        refIndex++; // Altrimenti incrementalo di 1 ( Dunque sarà necessariamente sempre minore dell'indice massimo )
+    };
+
+    showImage();
+
+});
+
+
+function showImage() {
+
+    let carouselImgTags = document.querySelectorAll("img"); // Mi serve prendere le img IN QUESTO ESATTO MOMENTO per sapere che classi hanno.
     for(let k=carouselImages.length-1; k >= 0; k--) { // Per k che parte dall'indice massimo dell'Array fino a 0, diminuendo di 1 ogni volta
 
         if (k == refIndex) { // Controlla che k sia uguale all'indice di riferimento ( immagine attiva )
@@ -67,10 +89,7 @@ buttonBack.addEventListener("click", function(event) {
             // console.log("Display-None Rimosso");
         } else { // Altrimenti aggiungi la classe d-none rendendo l'immagine invisibile.
             carouselImgTags[k].classList.add("d-none");
-        }
+        };
 
-    }
-
-})
-
-
+    };
+};
