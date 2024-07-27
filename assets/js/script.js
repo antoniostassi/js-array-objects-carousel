@@ -27,22 +27,27 @@ const carouselImages = [
     }
 ];
 
+const descriptionText = document.getElementById("description"); // Descrizione immagine
 const carouselContainer = document.querySelector(".image-container"); // Container del Carosello
-
 // Creazione del Carosello in base a quante immagini sono presenti nell'array objects
 let refIndex = 0; // Indice immagine attiva
-carouselImages.forEach(element => {
 
-    let newImg = document.createElement("img");
-    newImg.setAttribute("src", element.image);
+carouselCreation(refIndex);
 
-    if (element != carouselImages[refIndex]) { // Se il primo elemento del forEach è diverso dall'object ad indice 0 secondo l'Array carouselImages,
-        newImg.classList.add("d-none"); // allora applicagli la classe display:none; e nascondilo.
-    }
-
-    carouselContainer.append(newImg); // Aggiungi l'immagine al container
+function carouselCreation(indiceIniziale) {
+    descriptionText.innerHTML = `<h3>${carouselImages[indiceIniziale].title}</h3> <p>${carouselImages[indiceIniziale].text}</p>`;
+    carouselImages.forEach(element => {
+        let newImg = document.createElement("img");
+        newImg.setAttribute("src", element.image);
     
-});
+        if (element != carouselImages[indiceIniziale]) { // Se il primo elemento del forEach è diverso dall'object ad indice 0 secondo l'Array carouselImages,
+            newImg.classList.add("d-none"); // allora applicagli la classe display:none; e nascondilo.
+        }
+    
+        carouselContainer.append(newImg); // Aggiungi l'immagine al container
+        
+    });    
+}
 
 //
 
@@ -86,6 +91,7 @@ function showImage() {
 
         if (k == refIndex) { // Controlla che k sia uguale all'indice di riferimento ( immagine attiva )
             carouselImgTags[k].classList.remove("d-none"); // Se è vero, rimuovi la classe display:none dal tag img
+            descriptionText.innerHTML = `<h3>${carouselImages[k].title}</h3> <p>${carouselImages[k].text}</p>`;
             // console.log("Display-None Rimosso");
         } else { // Altrimenti aggiungi la classe d-none rendendo l'immagine invisibile.
             carouselImgTags[k].classList.add("d-none");
