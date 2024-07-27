@@ -64,3 +64,10 @@ h1 {
     opacity:1;
     cursor: pointer;
 }
+
+#description {
+    color:white;
+    font-size:20px;
+    bottom:10px;
+    right:10px;
+}
