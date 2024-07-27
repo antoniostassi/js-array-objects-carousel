@@ -23,20 +23,32 @@ const carouselImages = [
     }
 ];
 
-const carouselContainer = document.querySelector(".image-container");
-// Initialising Carousel 
+const carouselContainer = document.querySelector(".image-container"); // Container del Carosello
 
-let currentPhoto = "assets/img/01.webp";
-
+// Creazione del Carosello in base a quante immagini sono presenti nell'array objects
+let firstIndex = 0;
 carouselImages.forEach(element => {
 
     let newImg = document.createElement("img");
     newImg.setAttribute("src", element.image);
-    
-    if (!element.image.includes(currentPhoto)) {
-        newImg.classList.add("d-none");
+
+    if (element != carouselImages[firstIndex]) { // Se il primo elemento del forEach è diverso dall'object ad indice 0 secondo l'Array carouselImages,
+        newImg.classList.add("d-none"); // allora applicagli la classe display:none; e nascondilo.
     }
 
-    carouselContainer.append(newImg);
+    carouselContainer.append(newImg); // Aggiungi l'immagine al container
     
 });
+
+//
+
+const buttonBack = document.getElementById("backward"); // Tasto indietro
+const buttonNext = document.getElementById("forward"); // Tasto avanti
+
+buttonBack.addEventListener("click", function(event) {
+    event.preventDefault;
+
+
+})
+
+
