@@ -52,7 +52,8 @@ h1 {
 
 #backward,
 #forward{
-    top:46%;
+    top: 50%;
+    transform: translateY(-50%);
     font-size:50px;
     color:white;
     opacity:0.2;
