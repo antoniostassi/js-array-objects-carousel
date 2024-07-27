@@ -13,6 +13,14 @@ h1 {
     margin:25px 0;
 }
 
+.d-none {
+    display:none;
+}
+
+.d-block {
+    display:block;
+}
+
 .image-container {
     width:900px;
     height:450px;
