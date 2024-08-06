@@ -29,23 +29,40 @@ const carouselImages = [
 
 const descriptionText = document.getElementById("description"); // Descrizione immagine
 const carouselContainer = document.querySelector(".image-container"); // Container del Carosello
+const previewContainer = document.getElementById("preview"); // Contenitore preview immagini
+
 // Creazione del Carosello in base a quante immagini sono presenti nell'array objects
 let refIndex = 0; // Indice immagine attiva
 
 carouselCreation(refIndex);
+
+previewCreation(refIndex);
 
 function carouselCreation(indiceIniziale) {
     descriptionText.innerHTML = `<h3>${carouselImages[indiceIniziale].title}</h3> <p>${carouselImages[indiceIniziale].text}</p>`;
     carouselImages.forEach(element => {
         let newImg = document.createElement("img");
         newImg.setAttribute("src", element.image);
-    
+
         if (element != carouselImages[indiceIniziale]) { // Se il primo elemento del forEach è diverso dall'object ad indice 0 secondo l'Array carouselImages,
             newImg.classList.add("d-none"); // allora applicagli la classe display:none; e nascondilo.
         }
     
-        carouselContainer.append(newImg); // Aggiungi l'immagine al container
-        
+        carouselContainer.append(newImg); // Aggiungi l'immagine al container    
+    });    
+}
+
+function previewCreation(indiceIniziale) {
+
+    carouselImages.forEach(element => {
+        let newPreviewImg = document.createElement("img");
+        newPreviewImg.setAttribute("src", element.image);
+
+        if (element == carouselImages[indiceIniziale]) { // Se il primo elemento del forEach è diverso dall'object ad indice 0 secondo l'Array carouselImages,
+            newPreviewImg.classList.add("selected-image"); // allora applicagli la classe display:none; e nascondilo.
+        }
+    
+        previewContainer.append(newPreviewImg); // Aggiungi l'immagine al container    
     });    
 }
 
@@ -57,7 +74,6 @@ const buttonNext = document.getElementById("forward"); // Tasto avanti
 buttonBack.addEventListener("click", function(event) {
 
     event.preventDefault;
-    let carouselImgTags = document.querySelectorAll("img"); // Mi serve prendere le img IN QUESTO ESATTO MOMENTO per sapere che classi hanno.
 
     if(refIndex == 0) { // Se l'indice di riferimento è 0
         refIndex = carouselImages.length-1; // Allora al click, l'indice invece di diventare -1, diventerà il numero massimo corrispondere all'indice dell'Array.
