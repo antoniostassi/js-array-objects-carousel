@@ -19,6 +19,11 @@ const carouselImages = [
         image: 'assets/img/04.webp',
         title: '2024 Sportster S',
         text: 'Erede di un retaggio nato nel 1957, l’irriverente e ricercato Sportster S di Harley-Davidson evolve i tratti universalmente amati dei suoi predecessori: velocità scattante, agilità sorprendente e divertimento assicurato.',
+    },
+    {
+        image: 'assets/img/04.webp',
+        title: '2024 Sportster S',
+        text: 'Erede di un retaggio nato nel 1957, l’irriverente e ricercato Sportster S di Harley-Davidson evolve i tratti universalmente amati dei suoi predecessori: velocità scattante, agilità sorprendente e divertimento assicurato.',
     }
 ];
 

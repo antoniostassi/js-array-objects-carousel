@@ -96,6 +96,9 @@ h1 {
 #preview {
     width:30%;
     height:450px;
+    overflow-y:auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
     /* border:1px solid red; */
 }
 
