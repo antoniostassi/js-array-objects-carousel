@@ -109,15 +109,14 @@ function showImage() {
 
     let carouselImgTags = document.querySelectorAll(".image-container > img"); // Mi serve prendere le img IN QUESTO ESATTO MOMENTO per sapere che classi hanno.
     let previewImgTags = document.querySelectorAll("#preview > img");
-    console.log(previewImgTags);
+
     for(let k=carouselImages.length-1; k >= 0; k--) { // Per k che parte dall'indice massimo dell'Array fino a 0, diminuendo di 1 ogni volta
         
         if (k == refIndex) { // Controlla che k sia uguale all'indice di riferimento ( immagine attiva )
             carouselImgTags[k].classList.remove("d-none"); // Se è vero, rimuovi la classe display:none dal tag img
             descriptionText.innerHTML = `<h3>${carouselImages[k].title}</h3> <p>${carouselImages[k].text}</p>`;
-            previewImgTags[k].classList.add('selected-image');
-            previewImgTags[k].scrollIntoViewIfNeeded();
-            // console.log("Display-None Rimosso");
+            previewImgTags[k].classList.add('selected-image'); // Rimuovi il filtro bianco e nero dall'immagine
+            previewImgTags[k].scrollIntoViewIfNeeded(); // Scrolla se l'immagine visualizzata non è visibile nella preview
         } else { // Altrimenti aggiungi la classe d-none rendendo l'immagine invisibile.
             carouselImgTags[k].classList.add("d-none");
             previewImgTags[k].classList.remove('selected-image');
