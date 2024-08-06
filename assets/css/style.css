@@ -108,6 +108,11 @@ img {
     filter: grayscale(100%); 
     -webkit-filter: grayscale(100%);
     cursor:pointer;
+    transition: filter 0.5s;
+}
+
+#preview > img:hover {
+    filter:none;
 }
 
 .selected-image {
