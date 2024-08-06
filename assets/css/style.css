@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: black;
+    background-color: #F7F7F7;
 }
 
 :root {
@@ -48,6 +48,8 @@ h1 {
     height:100%;
     object-fit:cover;
     object-position:100% 30%;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 .position-relative {
