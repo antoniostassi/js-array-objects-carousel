@@ -102,10 +102,11 @@ h1 {
 img {
     margin:0;
     padding:0;
-    display: block;
+    
 }
 
 #preview > img {
+    display: block;
     width:100%;
     height:calc(450px / var(--var-num-of-images));
     object-fit:cover;
@@ -122,4 +123,8 @@ img {
 .selected-image {
     filter: none !important;
     -webkit-filter: none !important;
+}
+
+#logo {
+    max-width:250px;
 }
