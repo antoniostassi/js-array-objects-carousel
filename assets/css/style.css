@@ -2,6 +2,7 @@
     box-sizing:border-box;
     margin:0;
     padding:0;
+    font-family: 'CustomFont', sans-serif;
 }
 
 body {
@@ -15,10 +16,21 @@ body {
 img {
     max-width:100%;
     max-height:100%;
+    margin:0;
+    padding:0;
 }
 
-h1 {
-    margin:25px 0;
+#logo {
+    max-width:250px;
+}
+
+/* Utility Classes */
+.position-relative {
+    position:relative;
+}
+
+.position-absolute {
+    position:absolute;
 }
 
 .d-none {
@@ -33,6 +45,17 @@ h1 {
     display:flex;
 }
 
+.selected-image {
+    filter: none !important;
+    -webkit-filter: none !important;
+}
+
+/* Body Part */
+
+h1 {
+    margin:25px 0;
+}
+
 .container {
     margin:auto;
     max-width:1200px;
@@ -43,23 +66,7 @@ h1 {
     height:450px;
 }
 
-.image-container > img {
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    object-position:100% 30%;
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
-}
-
-.position-relative {
-    position:relative;
-}
-
-.position-absolute {
-    position:absolute;
-}
-
+/* Buttons */
 #backward {
     left:10px;
 }
@@ -84,6 +91,16 @@ h1 {
     cursor: pointer;
 }
 
+/* Image Style */
+.image-container > img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:100% 30%;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
 #description {
     padding:10px;
     width:100%;
@@ -95,6 +112,7 @@ h1 {
     text-align:right;
 }
 
+/* Preview Section */
 #preview {
     width:30%;
     height:450px;
@@ -102,12 +120,6 @@ h1 {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
     /* border:1px solid red; */
-}
-
-img {
-    margin:0;
-    padding:0;
-    
 }
 
 #preview > img {
@@ -125,11 +137,8 @@ img {
     filter:none;
 }
 
-.selected-image {
-    filter: none !important;
-    -webkit-filter: none !important;
-}
-
-#logo {
-    max-width:250px;
+/* Query */
+@font-face {
+    font-family: 'HarleyDavidson'; /* Name your font family */
+    src: url('../font/hdfontmarty.ttf'); /* Locate the .ttf file within your directory*/
 }
