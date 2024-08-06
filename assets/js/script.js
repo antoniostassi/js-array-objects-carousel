@@ -35,7 +35,6 @@ const previewContainer = document.getElementById("preview"); // Contenitore prev
 let refIndex = 0; // Indice immagine attiva
 
 carouselCreation(refIndex);
-
 previewCreation(refIndex);
 
 function carouselCreation(indiceIniziale) {
@@ -54,7 +53,7 @@ function carouselCreation(indiceIniziale) {
 
 function previewCreation(indiceIniziale) {
 
-    carouselImages.forEach(element => {
+    carouselImages.forEach(function(element, i) {
         let newPreviewImg = document.createElement("img");
         newPreviewImg.setAttribute("src", element.image);
 
@@ -62,7 +61,13 @@ function previewCreation(indiceIniziale) {
             newPreviewImg.classList.add("selected-image"); // allora applicagli la classe display:none; e nascondilo.
         }
     
+        newPreviewImg.addEventListener("click", function() {
+            refIndex = i;
+            showImage();
+        })
+
         previewContainer.append(newPreviewImg); // Aggiungi l'immagine al container    
+
     });    
 }
 
