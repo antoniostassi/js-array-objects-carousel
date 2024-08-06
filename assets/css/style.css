@@ -105,4 +105,11 @@ img {
     width:100%;
     height:calc(450px / var(--var-num-of-images));
     object-fit:cover;
+    filter: grayscale(100%); 
+    -webkit-filter: grayscale(100%);
+}
+
+.selected-image {
+    filter: none !important;
+    -webkit-filter: none !important;
 }
