@@ -2,28 +2,23 @@
 const carouselImages = [
     {
         image: 'assets/img/01.webp',
-        title: 'Marvel\'s Spiderman Miles Morale',
-        text: 'Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.',
+        title: '2024 Fat Bob 114',
+        text: 'Un macina asfalto affamato di potenza, il Fat Bob 114 di Harley-Davidson accompagna uno stile muscoloso a prestazioni irriducibili.',
     }, 
     {
         image: 'assets/img/02.webp',
-        title: 'Ratchet & Clank: Rift Apart',
-        text: 'Go dimension-hopping with Ratchet and Clank as they take on an evil emperor from another reality.',
+        title: '2024 Heritage Classic',
+        text: 'Il cruiser americano per eccellenza, l’Heritage Classic 114 di Harley-Davidson sfoggia dettagli vintage mozzafiato e puro stile rock ‘n’ roll.',
     }, 
     {
         image: 'assets/img/03.webp',
-        title: 'Fortnite',
-        text: "Grab all of your friends and drop into Epic Games Fortnite, a massive 100 - player face - off that combines looting, crafting, shootouts and chaos.",
+        title: '2024 Road King Special',
+        text: "Un bagger maestoso con una potenza che lascia il segno, il Road King Special di Harley-Davidson si distingue per il portamento autoritario che ti fa sentire dominatore della strada.",
     }, 
     {
         image: 'assets/img/04.webp',
-        title: 'Stray',
-        text: 'Lost, injured and alone, a stray cat must untangle an ancient mystery to escape a long-forgotten city',
-    }, 
-    {
-        image: 'assets/img/05.webp',
-        title: "Marvel's Avengers",
-        text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
+        title: '2024 Sportster S',
+        text: 'Erede di un retaggio nato nel 1957, l’irriverente e ricercato Sportster S di Harley-Davidson evolve i tratti universalmente amati dei suoi predecessori: velocità scattante, agilità sorprendente e divertimento assicurato.',
     }
 ];
 
